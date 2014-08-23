@@ -1,0 +1,42 @@
+﻿
+DIV#vehicleHeader
+{
+    width: 726px;
+    background-color: White;
+    color: #444;
+    top: 0px;
+    left: 0px;
+    border-top: 4px solid #cdcdcd;
+}
+
+DIV#content
+{
+    width: 726px;
+    background-color: White;
+    color: #444;
+    top: 0px;
+    left: 0px;
+    height:500px;
+}
+
+DIV#contentsActual
+{
+    width: 726px;
+    background-color:#E7E7E7;
+    color: #444;
+    top: 0px;
+    left: 0px;
+    height:190px;
+}
+
+DIV#contentheading
+{
+    padding:15px 20px 10px 20px;     
+}
+#divLine
+{
+    width:726px;
+    height:20px;
+    float:left;
+    background: url(/images/divLine.jpg) top no-repeat;
+ }

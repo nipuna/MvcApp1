@@ -1,0 +1,97 @@
+﻿
+DIV#phoneHeader
+{
+    width: 726px;
+    background-color: White;
+    color: #444;
+    top: 0px;
+    left: 0px;
+}
+
+DIV#vehicleHeader
+{
+    width: 726px;
+    background-color: White;
+    color: #444;
+    top: 0px;
+    left: 0px;
+    border-top: 4px solid #cdcdcd;
+}
+
+DIV#content
+{
+    width: 726px;
+    background-color: White;
+    color: #444;
+    top: 0px;
+    left: 0px;
+    height:auto;
+}
+
+DIV#contentsActual
+{
+    width: 721px;
+    background-color:#ffffff;
+    padding : 5px 0px 5px 5px;
+    color: #444;
+    top: 0px;
+    left: 0px;
+    height:auto;
+    font-size:smaller;
+}
+
+.anch{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11px;
+	color:#717171;
+	cursor:pointer;
+	float:left;
+    text-align:center;
+}
+
+#controlediv{
+	width:932px;
+	height:auto;
+	float:left;
+	background-color:#FFF;
+	padding:8px 8px 0px 10px;
+}
+
+.btn{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11px;
+	color:#000000;
+	cursor:pointer;
+    text-decoration: none;
+    text-align:center;
+    background: url(/images/anchBtn.jpg) no-repeat;
+    height: 19px;
+    width:88px;    
+}
+
+div a:hover {
+text-decoration:underline;
+}
+
+#divComm {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(/images/roundedSmall.gif) no-repeat scroll 0 0;
+font-size:0.7em;
+height:40px;
+padding:10px;
+width:710px;
+float:left;
+}
+
+/*
+.hlite {
+    height: 100px;
+    left: 647px;
+    position: absolute;
+    top: 456px;
+    width: 100px;
+    z-index: 1000;
+}
+*/

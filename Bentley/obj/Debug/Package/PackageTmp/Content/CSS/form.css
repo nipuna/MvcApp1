@@ -1,0 +1,132 @@
+﻿.outtaHere {
+	position:absolute;
+	left:-3000px;
+}
+/*Radio buttons*/
+.radioArea, .radioAreaChecked {
+	float:left;
+	width:14px !important;
+	height:14px;
+	background: url(../../images/radio.gif) no-repeat;
+	overflow: hidden;
+	font-size:0 !important;
+	line-height:0 !important;
+}
+.radioAreaChecked {background-position: 0 100%;}
+/*Checkboxes*/
+.checkboxArea, .checkboxAreaChecked {
+	float:left;
+	width:16px !important;
+	height:15px;
+	overflow: hidden;
+	background: url(../../images/checkbox.gif) no-repeat;
+	font-size:0 !important;
+	line-height:0 !important;
+}
+.checkboxAreaChecked {background-position: 0 100%;}
+/* Selects */
+.selectArea {
+	position: relative;
+	height: 18px;
+	float:left;
+	color:#000;
+	font-size:11px;
+	line-height:18px;
+}
+.results-order .selectArea{
+	height:26px;
+	background:#840056;
+}
+.selectArea .left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:2px;
+	height:100%;
+	background: url(../../images/select-left.gif) no-repeat;
+	display: block;
+}
+.results-order .selectArea .left{display:none;}
+.selectArea a.selectButton {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: url(../../images/select-button.gif) no-repeat;
+	width: 19px;
+	height: 18px;
+}
+.results-order .selectArea a.selectButton {
+	background: url(../../images/select-button-2.gif) no-repeat;
+	width: 20px;
+	height: 26px;
+}
+.selectArea .center{
+	height: 17px;
+	line-height:18px;
+	display:block;
+	padding:1px 25px 0 6px;
+	background: url(../../images/select-center.gif) repeat-x;
+}
+.results-order .selectArea .center{
+	height:25px;
+	background:none;
+	font: 12px/26px Arial, Helvetica, sans-serif;
+	color:#fff;
+}
+.selectArea .center img {
+	float:left;
+}
+/*Selects drop-down*/
+.optionsDivInvisible,
+.optionsDivVisible {
+	position: absolute;
+	background-color: #f0f0f0;
+	display: block;
+	z-index: 300;
+	font-size: 11px;
+	clear:both;
+}
+.drop-dif {background:#99CCCC;}
+.optionsDivInvisible {display: none;}
+.optionsDivVisible ul {
+	margin:0;
+	padding:2px;
+	overflow:hidden;
+	list-style: none;
+	border: 1px solid #c2c2c2;
+}
+* html .optionsDivVisible ul{
+	height:1%;
+	overflow:visible;
+}
+.optionsDivVisible ul li {
+	float:left;
+	width:100%;
+}
+.optionsDivVisible a {
+	color: #1c1c1c;
+	text-decoration: none;
+	display: block;
+	padding: 1px 4px;
+	font-size:11px;
+}
+* html .optionsDivVisible a{
+	overflow:visible;
+	height:1%;
+}
+.optionsDivVisible a img {
+	border:none;
+	float:left;
+}
+.optionsDivVisible a:hover {
+	text-decoration:underline;
+}
+.fakefile {
+left:0;
+line-height:90%;
+margin:0;
+padding:0;
+position:absolute;
+top:0;
+z-index:1;
+}

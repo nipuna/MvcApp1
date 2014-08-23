@@ -1,0 +1,39 @@
+﻿.prevNext           { float:left; padding-top:50px; padding-left:10px; display:block; width:30px; }
+#phoneContent       { padding-left:260px; }
+.phone              { width:130px; text-align:center; }
+.smallText          { font-family:Arial,Helvetica,sans-serif; color:#000; font-size:0.7em; }
+.smallTextTFr       { font-family:Arial,Helvetica,sans-serif; color:#000; font-size:0.7em;text-align:center; }
+
+
+.roundedBox         { clear:both; height:100px; width:710px; background:url(/images/rounded.gif) no-repeat; font-size:0.7em; }
+#dvCompat           { text-align:center; font-weight:normal; padding-top:7px; padding-bottom:7px; font-size:18px; font-family:Arial,Helvetica,sans-serif; }
+#dvPhoneName           { text-align:center; font-weight:normal; padding-top:7px; padding-bottom:7px; font-size:18px; font-family:Arial,Helvetica,sans-serif; }
+
+.title              { font-family:Arial,Helvetica,sans-serif;font-size:0.8em; font-weight:bold; }
+.vehicleText        {font-family:Arial,Helvetica,sans-serif;font-size:0.7em; color:#335522;margin-right:5px;}
+
+.hand               { cursor:hand; }
+
+div#scrollbar       { display:none; }
+div#wn	            { position:relative; width:650px; height:146px; left:35px; overflow:hidden; }
+div#scrollbar       { position:relative; width:696px; height:11px; display:block; font-size:1px;font-family:Arial,Helvetica,sans-serif; }
+div#track           { position:absolute; left:35px; top:1px; width:650px; height:11px; background: #efefef; }
+div#dragBar         { position:absolute; left:1px; top:1px; width:20px; height:9px; background-color:#cccccc; }  
+div#left            { position:absolute; left:10px; top:-100px; }  
+div#right           {
+	position:absolute;
+	right:-15px;
+	top:-100px;
+}
+
+div#scrollbar, div#track, div#dragBar, div#left, div#right { -moz-user-select: none; -khtml-user-select: none; }
+div#scrollbar img   { display:block; } 
+
+.topFeatures        { font-family:Arial,Helvetica,sans-serif;clear:both; width:426px; height:137px; margin-left:25px; margin-top:20px; 
+                      background:url(/images/rounded3.gif) no-repeat; font-size:0.7em; }
+.compat             { font-family:Arial,Helvetica,sans-serif;text-align:center; font-weight:bold; width:424px; font-size:1.2em }
+
+.toolTip            { z-index:1000; BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: gray 1px solid; 
+                      PADDING-LEFT: 2px; FONT-SIZE: 8pt; BACKGROUND: lightyellow; VISIBILITY: hidden; 
+                      PADDING-BOTTOM: 2px; BORDER-LEFT: gray 1px solid; PADDING-TOP: 2px; 
+                      BORDER-BOTTOM: gray 1px solid; FONT-FAMILY: Verdana; POSITION: absolute; }

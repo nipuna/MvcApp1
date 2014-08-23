@@ -1,0 +1,1597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="authenticateRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="authenticateRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticateRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="authenticateRequestWithBrand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="authenticateRequestWithBrandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticateRequestWithBrandResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="authenticateRequestAllCustomers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="authenticateRequestAllCustomersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticateRequestAllCustomersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerIdForBrand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="brandName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerIdForBrandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerIdForBrandResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllRegions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllRegionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllRegionsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllVehicleDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllVehicleDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllVehicleDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllVehicleDetailsForBrand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="brandName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllVehicleDetailsForBrandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllVehicleDetailsForBrandResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getModelYears">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modelId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getModelYearsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getModelYearsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getModelYearsWithCustomization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modelId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getModelYearsWithCustomizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getModelYearsWithCustomizationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllVehicleDetailsWithBrand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="brandId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllVehicleDetailsWithBrandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllVehicleDetailsWithBrandResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSystem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modelId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="modelYear" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="regionId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSystemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSystemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSystemsForModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modelId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="modelYear" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSystemsForModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSystemsForModelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllPhoneDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SystemIds" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllPhoneDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllPhoneDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTopFeatureResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTopFeatureResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTopFeatureResultsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMainFeatureResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMainFeatureResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMainFeatureResultsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAdditionalFeatureResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAdditionalFeatureResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAdditionalFeatureResultsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDistinctPhoneDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SystemIds" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDistinctPhoneDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDistinctPhoneDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDistinctPhoneDetailsWithRating">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SystemIds" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDistinctPhoneDetailsWithRatingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDistinctPhoneDetailsWithRatingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCommentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCommentsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFinalComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFinalCommentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFinalCommentsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getQuickGuides">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SystemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PhoneId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getQuickGuidesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getQuickGuidesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTopFeatureResultsForCulture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTopFeatureResultsForCultureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTopFeatureResultsForCultureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMainFeatureResultsForCulture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMainFeatureResultsForCultureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMainFeatureResultsForCultureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAdditionalFeatureResultsForCulture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAdditionalFeatureResultsForCultureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAdditionalFeatureResultsForCultureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getQuickGuidesForCulture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SystemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PhoneID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getQuickGuidesForCultureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getQuickGuidesForCultureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCultureId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="languageCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCultureIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCultureIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDistinctPhoneDetailsForCulture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SystemIds" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDistinctPhoneDetailsForCultureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDistinctPhoneDetailsForCultureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDistinctPhoneDetailsAsPerDeviceType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SystemIds" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDistinctPhoneDetailsAsPerDeviceTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDistinctPhoneDetailsAsPerDeviceTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCommentsForCulture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCommentsForCultureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCommentsForCultureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFinalCommentsForCulture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFinalCommentsForCultureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFinalCommentsForCultureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCWIText">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="brandName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCWITextResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCWITextResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCWITextForBrand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="brandId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCWITextForBrandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCWITextForBrandResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSystemForVehicle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vehicleId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSystemForVehicleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSystemForVehicleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSystemForBrand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="brandid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSystemForBrandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSystemForBrandResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getModelForTestInstance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getModelForTestInstanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getModelForTestInstanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTopFRForCultureWthCmmntText">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTopFRForCultureWthCmmntTextResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTopFRForCultureWthCmmntTextResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertLogDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VehicleID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dateAndTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="cultureId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="testInstanceID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertLogDetailsResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="authenticateRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:authenticateRequest" />
+  </wsdl:message>
+  <wsdl:message name="authenticateRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:authenticateRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="authenticateRequestWithBrandSoapIn">
+    <wsdl:part name="parameters" element="tns:authenticateRequestWithBrand" />
+  </wsdl:message>
+  <wsdl:message name="authenticateRequestWithBrandSoapOut">
+    <wsdl:part name="parameters" element="tns:authenticateRequestWithBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="authenticateRequestAllCustomersSoapIn">
+    <wsdl:part name="parameters" element="tns:authenticateRequestAllCustomers" />
+  </wsdl:message>
+  <wsdl:message name="authenticateRequestAllCustomersSoapOut">
+    <wsdl:part name="parameters" element="tns:authenticateRequestAllCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerIdForBrandSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerIdForBrand" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerIdForBrandSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerIdForBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllRegionsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllRegions" />
+  </wsdl:message>
+  <wsdl:message name="getAllRegionsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllVehicleDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllVehicleDetails" />
+  </wsdl:message>
+  <wsdl:message name="getAllVehicleDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllVehicleDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllVehicleDetailsForBrandSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllVehicleDetailsForBrand" />
+  </wsdl:message>
+  <wsdl:message name="getAllVehicleDetailsForBrandSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllVehicleDetailsForBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="getModelYearsSoapIn">
+    <wsdl:part name="parameters" element="tns:getModelYears" />
+  </wsdl:message>
+  <wsdl:message name="getModelYearsSoapOut">
+    <wsdl:part name="parameters" element="tns:getModelYearsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getModelYearsWithCustomizationSoapIn">
+    <wsdl:part name="parameters" element="tns:getModelYearsWithCustomization" />
+  </wsdl:message>
+  <wsdl:message name="getModelYearsWithCustomizationSoapOut">
+    <wsdl:part name="parameters" element="tns:getModelYearsWithCustomizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllVehicleDetailsWithBrandSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllVehicleDetailsWithBrand" />
+  </wsdl:message>
+  <wsdl:message name="getAllVehicleDetailsWithBrandSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllVehicleDetailsWithBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSystemSoapIn">
+    <wsdl:part name="parameters" element="tns:getSystem" />
+  </wsdl:message>
+  <wsdl:message name="getSystemSoapOut">
+    <wsdl:part name="parameters" element="tns:getSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSystemsForModelSoapIn">
+    <wsdl:part name="parameters" element="tns:getSystemsForModel" />
+  </wsdl:message>
+  <wsdl:message name="getSystemsForModelSoapOut">
+    <wsdl:part name="parameters" element="tns:getSystemsForModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllPhoneDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllPhoneDetails" />
+  </wsdl:message>
+  <wsdl:message name="getAllPhoneDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllPhoneDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTopFeatureResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:getTopFeatureResults" />
+  </wsdl:message>
+  <wsdl:message name="getTopFeatureResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:getTopFeatureResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMainFeatureResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:getMainFeatureResults" />
+  </wsdl:message>
+  <wsdl:message name="getMainFeatureResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:getMainFeatureResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAdditionalFeatureResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAdditionalFeatureResults" />
+  </wsdl:message>
+  <wsdl:message name="getAdditionalFeatureResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAdditionalFeatureResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDistinctPhoneDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:getDistinctPhoneDetails" />
+  </wsdl:message>
+  <wsdl:message name="getDistinctPhoneDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:getDistinctPhoneDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDistinctPhoneDetailsWithRatingSoapIn">
+    <wsdl:part name="parameters" element="tns:getDistinctPhoneDetailsWithRating" />
+  </wsdl:message>
+  <wsdl:message name="getDistinctPhoneDetailsWithRatingSoapOut">
+    <wsdl:part name="parameters" element="tns:getDistinctPhoneDetailsWithRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:getComments" />
+  </wsdl:message>
+  <wsdl:message name="getCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFinalCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:getFinalComments" />
+  </wsdl:message>
+  <wsdl:message name="getFinalCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:getFinalCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getQuickGuidesSoapIn">
+    <wsdl:part name="parameters" element="tns:getQuickGuides" />
+  </wsdl:message>
+  <wsdl:message name="getQuickGuidesSoapOut">
+    <wsdl:part name="parameters" element="tns:getQuickGuidesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTopFeatureResultsForCultureSoapIn">
+    <wsdl:part name="parameters" element="tns:getTopFeatureResultsForCulture" />
+  </wsdl:message>
+  <wsdl:message name="getTopFeatureResultsForCultureSoapOut">
+    <wsdl:part name="parameters" element="tns:getTopFeatureResultsForCultureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMainFeatureResultsForCultureSoapIn">
+    <wsdl:part name="parameters" element="tns:getMainFeatureResultsForCulture" />
+  </wsdl:message>
+  <wsdl:message name="getMainFeatureResultsForCultureSoapOut">
+    <wsdl:part name="parameters" element="tns:getMainFeatureResultsForCultureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAdditionalFeatureResultsForCultureSoapIn">
+    <wsdl:part name="parameters" element="tns:getAdditionalFeatureResultsForCulture" />
+  </wsdl:message>
+  <wsdl:message name="getAdditionalFeatureResultsForCultureSoapOut">
+    <wsdl:part name="parameters" element="tns:getAdditionalFeatureResultsForCultureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getQuickGuidesForCultureSoapIn">
+    <wsdl:part name="parameters" element="tns:getQuickGuidesForCulture" />
+  </wsdl:message>
+  <wsdl:message name="getQuickGuidesForCultureSoapOut">
+    <wsdl:part name="parameters" element="tns:getQuickGuidesForCultureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCultureIdSoapIn">
+    <wsdl:part name="parameters" element="tns:getCultureId" />
+  </wsdl:message>
+  <wsdl:message name="getCultureIdSoapOut">
+    <wsdl:part name="parameters" element="tns:getCultureIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDistinctPhoneDetailsForCultureSoapIn">
+    <wsdl:part name="parameters" element="tns:getDistinctPhoneDetailsForCulture" />
+  </wsdl:message>
+  <wsdl:message name="getDistinctPhoneDetailsForCultureSoapOut">
+    <wsdl:part name="parameters" element="tns:getDistinctPhoneDetailsForCultureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDistinctPhoneDetailsAsPerDeviceTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:getDistinctPhoneDetailsAsPerDeviceType" />
+  </wsdl:message>
+  <wsdl:message name="getDistinctPhoneDetailsAsPerDeviceTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:getDistinctPhoneDetailsAsPerDeviceTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCommentsForCultureSoapIn">
+    <wsdl:part name="parameters" element="tns:getCommentsForCulture" />
+  </wsdl:message>
+  <wsdl:message name="getCommentsForCultureSoapOut">
+    <wsdl:part name="parameters" element="tns:getCommentsForCultureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFinalCommentsForCultureSoapIn">
+    <wsdl:part name="parameters" element="tns:getFinalCommentsForCulture" />
+  </wsdl:message>
+  <wsdl:message name="getFinalCommentsForCultureSoapOut">
+    <wsdl:part name="parameters" element="tns:getFinalCommentsForCultureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCWITextSoapIn">
+    <wsdl:part name="parameters" element="tns:getCWIText" />
+  </wsdl:message>
+  <wsdl:message name="getCWITextSoapOut">
+    <wsdl:part name="parameters" element="tns:getCWITextResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCWITextForBrandSoapIn">
+    <wsdl:part name="parameters" element="tns:getCWITextForBrand" />
+  </wsdl:message>
+  <wsdl:message name="getCWITextForBrandSoapOut">
+    <wsdl:part name="parameters" element="tns:getCWITextForBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSystemForVehicleSoapIn">
+    <wsdl:part name="parameters" element="tns:getSystemForVehicle" />
+  </wsdl:message>
+  <wsdl:message name="getSystemForVehicleSoapOut">
+    <wsdl:part name="parameters" element="tns:getSystemForVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSystemForBrandSoapIn">
+    <wsdl:part name="parameters" element="tns:getSystemForBrand" />
+  </wsdl:message>
+  <wsdl:message name="getSystemForBrandSoapOut">
+    <wsdl:part name="parameters" element="tns:getSystemForBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="getModelForTestInstanceSoapIn">
+    <wsdl:part name="parameters" element="tns:getModelForTestInstance" />
+  </wsdl:message>
+  <wsdl:message name="getModelForTestInstanceSoapOut">
+    <wsdl:part name="parameters" element="tns:getModelForTestInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTopFRForCultureWthCmmntTextSoapIn">
+    <wsdl:part name="parameters" element="tns:getTopFRForCultureWthCmmntText" />
+  </wsdl:message>
+  <wsdl:message name="getTopFRForCultureWthCmmntTextSoapOut">
+    <wsdl:part name="parameters" element="tns:getTopFRForCultureWthCmmntTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertLogDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertLogDetails" />
+  </wsdl:message>
+  <wsdl:message name="InsertLogDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertLogDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CwiAPIServiceSoap">
+    <wsdl:operation name="authenticateRequest">
+      <wsdl:input message="tns:authenticateRequestSoapIn" />
+      <wsdl:output message="tns:authenticateRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="authenticateRequestWithBrand">
+      <wsdl:input message="tns:authenticateRequestWithBrandSoapIn" />
+      <wsdl:output message="tns:authenticateRequestWithBrandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="authenticateRequestAllCustomers">
+      <wsdl:input message="tns:authenticateRequestAllCustomersSoapIn" />
+      <wsdl:output message="tns:authenticateRequestAllCustomersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIdForBrand">
+      <wsdl:input message="tns:getCustomerIdForBrandSoapIn" />
+      <wsdl:output message="tns:getCustomerIdForBrandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllRegions">
+      <wsdl:input message="tns:getAllRegionsSoapIn" />
+      <wsdl:output message="tns:getAllRegionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllVehicleDetails">
+      <wsdl:input message="tns:getAllVehicleDetailsSoapIn" />
+      <wsdl:output message="tns:getAllVehicleDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllVehicleDetailsForBrand">
+      <wsdl:input message="tns:getAllVehicleDetailsForBrandSoapIn" />
+      <wsdl:output message="tns:getAllVehicleDetailsForBrandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getModelYears">
+      <wsdl:input message="tns:getModelYearsSoapIn" />
+      <wsdl:output message="tns:getModelYearsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getModelYearsWithCustomization">
+      <wsdl:input message="tns:getModelYearsWithCustomizationSoapIn" />
+      <wsdl:output message="tns:getModelYearsWithCustomizationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllVehicleDetailsWithBrand">
+      <wsdl:input message="tns:getAllVehicleDetailsWithBrandSoapIn" />
+      <wsdl:output message="tns:getAllVehicleDetailsWithBrandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSystem">
+      <wsdl:input message="tns:getSystemSoapIn" />
+      <wsdl:output message="tns:getSystemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSystemsForModel">
+      <wsdl:input message="tns:getSystemsForModelSoapIn" />
+      <wsdl:output message="tns:getSystemsForModelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllPhoneDetails">
+      <wsdl:input message="tns:getAllPhoneDetailsSoapIn" />
+      <wsdl:output message="tns:getAllPhoneDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTopFeatureResults">
+      <wsdl:input message="tns:getTopFeatureResultsSoapIn" />
+      <wsdl:output message="tns:getTopFeatureResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMainFeatureResults">
+      <wsdl:input message="tns:getMainFeatureResultsSoapIn" />
+      <wsdl:output message="tns:getMainFeatureResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAdditionalFeatureResults">
+      <wsdl:input message="tns:getAdditionalFeatureResultsSoapIn" />
+      <wsdl:output message="tns:getAdditionalFeatureResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetails">
+      <wsdl:input message="tns:getDistinctPhoneDetailsSoapIn" />
+      <wsdl:output message="tns:getDistinctPhoneDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetailsWithRating">
+      <wsdl:input message="tns:getDistinctPhoneDetailsWithRatingSoapIn" />
+      <wsdl:output message="tns:getDistinctPhoneDetailsWithRatingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getComments">
+      <wsdl:input message="tns:getCommentsSoapIn" />
+      <wsdl:output message="tns:getCommentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFinalComments">
+      <wsdl:input message="tns:getFinalCommentsSoapIn" />
+      <wsdl:output message="tns:getFinalCommentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getQuickGuides">
+      <wsdl:input message="tns:getQuickGuidesSoapIn" />
+      <wsdl:output message="tns:getQuickGuidesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTopFeatureResultsForCulture">
+      <wsdl:input message="tns:getTopFeatureResultsForCultureSoapIn" />
+      <wsdl:output message="tns:getTopFeatureResultsForCultureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMainFeatureResultsForCulture">
+      <wsdl:input message="tns:getMainFeatureResultsForCultureSoapIn" />
+      <wsdl:output message="tns:getMainFeatureResultsForCultureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAdditionalFeatureResultsForCulture">
+      <wsdl:input message="tns:getAdditionalFeatureResultsForCultureSoapIn" />
+      <wsdl:output message="tns:getAdditionalFeatureResultsForCultureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getQuickGuidesForCulture">
+      <wsdl:input message="tns:getQuickGuidesForCultureSoapIn" />
+      <wsdl:output message="tns:getQuickGuidesForCultureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCultureId">
+      <wsdl:input message="tns:getCultureIdSoapIn" />
+      <wsdl:output message="tns:getCultureIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetailsForCulture">
+      <wsdl:input message="tns:getDistinctPhoneDetailsForCultureSoapIn" />
+      <wsdl:output message="tns:getDistinctPhoneDetailsForCultureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetailsAsPerDeviceType">
+      <wsdl:input message="tns:getDistinctPhoneDetailsAsPerDeviceTypeSoapIn" />
+      <wsdl:output message="tns:getDistinctPhoneDetailsAsPerDeviceTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCommentsForCulture">
+      <wsdl:input message="tns:getCommentsForCultureSoapIn" />
+      <wsdl:output message="tns:getCommentsForCultureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFinalCommentsForCulture">
+      <wsdl:input message="tns:getFinalCommentsForCultureSoapIn" />
+      <wsdl:output message="tns:getFinalCommentsForCultureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCWIText">
+      <wsdl:input message="tns:getCWITextSoapIn" />
+      <wsdl:output message="tns:getCWITextSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCWITextForBrand">
+      <wsdl:input message="tns:getCWITextForBrandSoapIn" />
+      <wsdl:output message="tns:getCWITextForBrandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSystemForVehicle">
+      <wsdl:input message="tns:getSystemForVehicleSoapIn" />
+      <wsdl:output message="tns:getSystemForVehicleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSystemForBrand">
+      <wsdl:input message="tns:getSystemForBrandSoapIn" />
+      <wsdl:output message="tns:getSystemForBrandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getModelForTestInstance">
+      <wsdl:input message="tns:getModelForTestInstanceSoapIn" />
+      <wsdl:output message="tns:getModelForTestInstanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTopFRForCultureWthCmmntText">
+      <wsdl:input message="tns:getTopFRForCultureWthCmmntTextSoapIn" />
+      <wsdl:output message="tns:getTopFRForCultureWthCmmntTextSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogDetails">
+      <wsdl:input message="tns:InsertLogDetailsSoapIn" />
+      <wsdl:output message="tns:InsertLogDetailsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CwiAPIServiceSoap" type="tns:CwiAPIServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="authenticateRequest">
+      <soap:operation soapAction="http://tempuri.org/authenticateRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authenticateRequestWithBrand">
+      <soap:operation soapAction="http://tempuri.org/authenticateRequestWithBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authenticateRequestAllCustomers">
+      <soap:operation soapAction="http://tempuri.org/authenticateRequestAllCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIdForBrand">
+      <soap:operation soapAction="http://tempuri.org/getCustomerIdForBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllRegions">
+      <soap:operation soapAction="http://tempuri.org/getAllRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllVehicleDetails">
+      <soap:operation soapAction="http://tempuri.org/getAllVehicleDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllVehicleDetailsForBrand">
+      <soap:operation soapAction="http://tempuri.org/getAllVehicleDetailsForBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getModelYears">
+      <soap:operation soapAction="http://tempuri.org/getModelYears" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getModelYearsWithCustomization">
+      <soap:operation soapAction="http://tempuri.org/getModelYearsWithCustomization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllVehicleDetailsWithBrand">
+      <soap:operation soapAction="http://tempuri.org/getAllVehicleDetailsWithBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSystem">
+      <soap:operation soapAction="http://tempuri.org/getSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemsForModel">
+      <soap:operation soapAction="http://tempuri.org/getSystemsForModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllPhoneDetails">
+      <soap:operation soapAction="http://tempuri.org/getAllPhoneDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTopFeatureResults">
+      <soap:operation soapAction="http://tempuri.org/getTopFeatureResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMainFeatureResults">
+      <soap:operation soapAction="http://tempuri.org/getMainFeatureResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdditionalFeatureResults">
+      <soap:operation soapAction="http://tempuri.org/getAdditionalFeatureResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetails">
+      <soap:operation soapAction="http://tempuri.org/getDistinctPhoneDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetailsWithRating">
+      <soap:operation soapAction="http://tempuri.org/getDistinctPhoneDetailsWithRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getComments">
+      <soap:operation soapAction="http://tempuri.org/getComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFinalComments">
+      <soap:operation soapAction="http://tempuri.org/getFinalComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuickGuides">
+      <soap:operation soapAction="http://tempuri.org/getQuickGuides" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTopFeatureResultsForCulture">
+      <soap:operation soapAction="http://tempuri.org/getTopFeatureResultsForCulture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMainFeatureResultsForCulture">
+      <soap:operation soapAction="http://tempuri.org/getMainFeatureResultsForCulture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdditionalFeatureResultsForCulture">
+      <soap:operation soapAction="http://tempuri.org/getAdditionalFeatureResultsForCulture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuickGuidesForCulture">
+      <soap:operation soapAction="http://tempuri.org/getQuickGuidesForCulture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCultureId">
+      <soap:operation soapAction="http://tempuri.org/getCultureId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetailsForCulture">
+      <soap:operation soapAction="http://tempuri.org/getDistinctPhoneDetailsForCulture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetailsAsPerDeviceType">
+      <soap:operation soapAction="http://tempuri.org/getDistinctPhoneDetailsAsPerDeviceType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCommentsForCulture">
+      <soap:operation soapAction="http://tempuri.org/getCommentsForCulture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFinalCommentsForCulture">
+      <soap:operation soapAction="http://tempuri.org/getFinalCommentsForCulture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCWIText">
+      <soap:operation soapAction="http://tempuri.org/getCWIText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCWITextForBrand">
+      <soap:operation soapAction="http://tempuri.org/getCWITextForBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemForVehicle">
+      <soap:operation soapAction="http://tempuri.org/getSystemForVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemForBrand">
+      <soap:operation soapAction="http://tempuri.org/getSystemForBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getModelForTestInstance">
+      <soap:operation soapAction="http://tempuri.org/getModelForTestInstance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTopFRForCultureWthCmmntText">
+      <soap:operation soapAction="http://tempuri.org/getTopFRForCultureWthCmmntText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogDetails">
+      <soap:operation soapAction="http://tempuri.org/InsertLogDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CwiAPIServiceSoap12" type="tns:CwiAPIServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="authenticateRequest">
+      <soap12:operation soapAction="http://tempuri.org/authenticateRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authenticateRequestWithBrand">
+      <soap12:operation soapAction="http://tempuri.org/authenticateRequestWithBrand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authenticateRequestAllCustomers">
+      <soap12:operation soapAction="http://tempuri.org/authenticateRequestAllCustomers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIdForBrand">
+      <soap12:operation soapAction="http://tempuri.org/getCustomerIdForBrand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllRegions">
+      <soap12:operation soapAction="http://tempuri.org/getAllRegions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllVehicleDetails">
+      <soap12:operation soapAction="http://tempuri.org/getAllVehicleDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllVehicleDetailsForBrand">
+      <soap12:operation soapAction="http://tempuri.org/getAllVehicleDetailsForBrand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getModelYears">
+      <soap12:operation soapAction="http://tempuri.org/getModelYears" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getModelYearsWithCustomization">
+      <soap12:operation soapAction="http://tempuri.org/getModelYearsWithCustomization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllVehicleDetailsWithBrand">
+      <soap12:operation soapAction="http://tempuri.org/getAllVehicleDetailsWithBrand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSystem">
+      <soap12:operation soapAction="http://tempuri.org/getSystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemsForModel">
+      <soap12:operation soapAction="http://tempuri.org/getSystemsForModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllPhoneDetails">
+      <soap12:operation soapAction="http://tempuri.org/getAllPhoneDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTopFeatureResults">
+      <soap12:operation soapAction="http://tempuri.org/getTopFeatureResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMainFeatureResults">
+      <soap12:operation soapAction="http://tempuri.org/getMainFeatureResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdditionalFeatureResults">
+      <soap12:operation soapAction="http://tempuri.org/getAdditionalFeatureResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetails">
+      <soap12:operation soapAction="http://tempuri.org/getDistinctPhoneDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetailsWithRating">
+      <soap12:operation soapAction="http://tempuri.org/getDistinctPhoneDetailsWithRating" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getComments">
+      <soap12:operation soapAction="http://tempuri.org/getComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFinalComments">
+      <soap12:operation soapAction="http://tempuri.org/getFinalComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuickGuides">
+      <soap12:operation soapAction="http://tempuri.org/getQuickGuides" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTopFeatureResultsForCulture">
+      <soap12:operation soapAction="http://tempuri.org/getTopFeatureResultsForCulture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMainFeatureResultsForCulture">
+      <soap12:operation soapAction="http://tempuri.org/getMainFeatureResultsForCulture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdditionalFeatureResultsForCulture">
+      <soap12:operation soapAction="http://tempuri.org/getAdditionalFeatureResultsForCulture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuickGuidesForCulture">
+      <soap12:operation soapAction="http://tempuri.org/getQuickGuidesForCulture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCultureId">
+      <soap12:operation soapAction="http://tempuri.org/getCultureId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetailsForCulture">
+      <soap12:operation soapAction="http://tempuri.org/getDistinctPhoneDetailsForCulture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDistinctPhoneDetailsAsPerDeviceType">
+      <soap12:operation soapAction="http://tempuri.org/getDistinctPhoneDetailsAsPerDeviceType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCommentsForCulture">
+      <soap12:operation soapAction="http://tempuri.org/getCommentsForCulture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFinalCommentsForCulture">
+      <soap12:operation soapAction="http://tempuri.org/getFinalCommentsForCulture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCWIText">
+      <soap12:operation soapAction="http://tempuri.org/getCWIText" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCWITextForBrand">
+      <soap12:operation soapAction="http://tempuri.org/getCWITextForBrand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemForVehicle">
+      <soap12:operation soapAction="http://tempuri.org/getSystemForVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemForBrand">
+      <soap12:operation soapAction="http://tempuri.org/getSystemForBrand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getModelForTestInstance">
+      <soap12:operation soapAction="http://tempuri.org/getModelForTestInstance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTopFRForCultureWthCmmntText">
+      <soap12:operation soapAction="http://tempuri.org/getTopFRForCultureWthCmmntText" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogDetails">
+      <soap12:operation soapAction="http://tempuri.org/InsertLogDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CwiAPIService">
+    <wsdl:port name="CwiAPIServiceSoap" binding="tns:CwiAPIServiceSoap">
+      <soap:address location="http://test-api.nextgen-technology.net/CwiAPIService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CwiAPIServiceSoap12" binding="tns:CwiAPIServiceSoap12">
+      <soap12:address location="http://test-api.nextgen-technology.net/CwiAPIService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,15 @@
+D:\PROJECTS\WEB PROJECTS\Bentley\Bentley\bin\Bentley.dll
+D:\PROJECTS\WEB PROJECTS\Bentley\Bentley\bin\Bentley.pdb
+D:\PROJECTS\WEB PROJECTS\Bentley\Bentley\obj\Debug\ResolveAssemblyReference.cache
+D:\PROJECTS\WEB PROJECTS\Bentley\Bentley\obj\Debug\Bentley.dll
+D:\PROJECTS\WEB PROJECTS\Bentley\Bentley\obj\Debug\Bentley.pdb
+D:\PROJECTS\WEB PROJECTS\CWI 3.5 FW\Bentley\Bentley\bin\Bentley.dll
+D:\PROJECTS\WEB PROJECTS\CWI 3.5 FW\Bentley\Bentley\bin\Bentley.pdb
+D:\PROJECTS\WEB PROJECTS\CWI 3.5 FW\Bentley\Bentley\obj\Debug\ResolveAssemblyReference.cache
+D:\PROJECTS\WEB PROJECTS\CWI 3.5 FW\Bentley\Bentley\obj\Debug\Bentley.dll
+D:\PROJECTS\WEB PROJECTS\CWI 3.5 FW\Bentley\Bentley\obj\Debug\Bentley.pdb
+D:\DEVELOPMENT\WebApplications\Bentley\Bentley\bin\Bentley.dll
+D:\DEVELOPMENT\WebApplications\Bentley\Bentley\bin\Bentley.pdb
+D:\DEVELOPMENT\WebApplications\Bentley\Bentley\obj\Debug\ResolveAssemblyReference.cache
+D:\DEVELOPMENT\WebApplications\Bentley\Bentley\obj\Debug\Bentley.dll
+D:\DEVELOPMENT\WebApplications\Bentley\Bentley\obj\Debug\Bentley.pdb
